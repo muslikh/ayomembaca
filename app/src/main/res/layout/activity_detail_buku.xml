@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+
+    tools:context=".DetailBuku">
+
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#002B1E1E">
+
+
+        <LinearLayout
+
+            android:id="@+id/linearBacaBuku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#A04C4C">
+
+                <TextView
+                    android:id="@+id/judulDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Judul"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bintang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/judulDetail"
+                    android:layout_marginLeft="10dp"
+                    android:text="Rating"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/PengarangDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bintang"
+                    android:layout_marginLeft="10dp"
+                    android:text="Pengarang"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/GambarDetailBuku"
+
+                    android:layout_width="135dp"
+                    android:layout_height="153dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@color/colorPrimary" />
+
+                <TableLayout
+                    android:layout_below="@+id/GambarDetailBuku"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="-4dp"
+                    android:background="@drawable/round">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:showDividers="beginning|end">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:text="Pembaca"
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:text="Favorite"
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:text="Rating"
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:showDividers="beginning|end">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:text="10K"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:text="8K"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight=".2"
+                            android:text="#1"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/labelsinopsis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sinopsis :"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sinopsis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Novel ini bercerita tentang lorem ipsun dolor sit amet"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/labelkategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kategori :"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/kategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#Amet Gan"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFavorite"
+        android:layout_width="66dp"
+        android:layout_height="64dp"
+        android:layout_above="@id/menuDetail"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="69dp"
+        android:clickable="true"
+        android:foregroundGravity="center"
+        android:src="@drawable/ic_favorite_black_24dp" />
+
+    <TableLayout
+            android:id="@+id/menuDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_shadow"
+            >
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:showDividers="beginning|end"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/btnSimpan"
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:text="Simpan"
+                    android:textAlignment="center"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/btnMulaiBaca"
+                    android:layout_width="0dp"
+                    android:layout_weight=".2"
+                    android:background="@android:color/holo_red_light"
+                    android:padding="10dp"
+                    android:text="Mulai Baca"
+                    android:textAlignment="center"
+                    android:textColor="#F5F2F2"
+                    android:textSize="16dp" />
+            </TableRow>
+        </TableLayout>
+
+</RelativeLayout>

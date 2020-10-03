@@ -1,0 +1,258 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal|center_vertical"/>-->
+
+    <TableLayout
+        android:id="@+id/menuAtas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/border_shadow"
+        >
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:showDividers="beginning|end"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:drawableTop="@drawable/ic_icons8_home"
+                android:text="Semua"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:text="Novel Dan Cerpen"
+                android:drawableTop="@drawable/ic_icons8_favorites"
+                android:textAlignment="center" />
+
+            <TextView
+                android:drawableTop="@drawable/ic_icons8_folder"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:text="Sejarah"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:text="Dakwah"
+                android:drawableTop="@drawable/ic_icons8_user_male"
+                android:textAlignment="center" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:text="Umum"
+                android:drawableTop="@drawable/ic_icons8_user_male"
+                android:textAlignment="center" />
+        </TableRow>
+
+<!--        <TableRow-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:showDividers="beginning|end"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight=".2"-->
+<!--                android:drawableTop="@drawable/ic_icons8_home"-->
+<!--                android:text="Beranda"-->
+<!--                android:textAlignment="center" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight=".2"-->
+<!--                android:text="Favorite"-->
+<!--                android:drawableTop="@drawable/ic_icons8_favorites"-->
+<!--                android:textAlignment="center" />-->
+
+<!--            <TextView-->
+<!--                android:drawableTop="@drawable/ic_icons8_folder"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight=".2"-->
+<!--                android:text="Tersimpan"-->
+<!--                android:textAlignment="center" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight=".2"-->
+<!--                android:text="Profil"-->
+<!--                android:drawableTop="@drawable/ic_icons8_user_male"-->
+<!--                android:textAlignment="center" />-->
+<!--        </TableRow>-->
+    </TableLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/menuAtas"
+        android:layout_above="@id/menuMain">
+
+<!--        <FrameLayout-->
+<!--            android:id="@+id/frameUtama"-->
+<!--            android:layout_above="@+id/menuMain"-->
+<!--            android:padding="5dp"-->
+<!--            android:paddingBottom="0dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+    <LinearLayout
+        android:layout_below="@id/menuAtas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:paddingBottom="0dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/labelterbaru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terbaru :"
+            android:textStyle="bold"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/LabelPopuler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terpopuler:"
+            android:textStyle="bold"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewPopuler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/LabelCerpenNovel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerpen Dan Novel :"
+            android:textStyle="bold"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewCerpeenNovel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/LabelSejarah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sejarah :"
+            android:textStyle="bold"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewSejarah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/LabelDakwah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dakwah :"
+            android:textStyle="bold"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewDakwah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/LabelUmum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Umum :"
+            android:textStyle="bold"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewUmum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TableLayout
+        android:id="@+id/menuMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-2dp"
+        android:background="@drawable/border_shadow"
+        >
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:showDividers="beginning|end"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:drawableTop="@drawable/ic_icons8_home"
+                android:text="Beranda"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:text="Favorite"
+                android:drawableTop="@drawable/ic_icons8_favorites"
+                android:textAlignment="center" />
+
+            <TextView
+                android:drawableTop="@drawable/ic_icons8_folder"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:text="Tersimpan"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:text="Profil"
+                android:drawableTop="@drawable/ic_icons8_user_male"
+                android:textAlignment="center" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
